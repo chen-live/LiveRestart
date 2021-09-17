@@ -306,7 +306,9 @@ ul#total li .achievementtitle,
   white-space: nowrap;
   color: #EEEEEE;
 }
-
+.propinitial{
+  min-height: 50vh;
+}
 .propinitial,
 .selectlist {
   list-style: none;

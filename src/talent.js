@@ -74,7 +74,7 @@ class Talent {
             rate[grade] *= rateAddition[grade];
 
         const randomGrade = () => {
-            let randomNumber = Math.floor(Math.random() * 1000);
+            let randomNumber = Math.floor(Math.random() * 10);
             if((randomNumber -= rate[3]) < 0) return 3;
             if((randomNumber -= rate[2]) < 0) return 2;
             if((randomNumber -= rate[1]) < 0) return 1;
@@ -83,6 +83,8 @@ class Talent {
 
         // 1000, 100, 10, 1
         const talentList = {};
+        console.log(talentList)
+        console.log(this.#talents)
         for(const talentId in this.#talents) {
             const { id, grade, name, description } = this.#talents[talentId];
             if(id == include) {
@@ -92,8 +94,7 @@ class Talent {
             if(!talentList[grade]) talentList[grade] = [{ grade, name, description, id }];
             else talentList[grade].push({ grade, name, description, id });
         }
-
-        return new Array(10)
+        return new Array(100)
             .fill(1).map((v, i)=>{
                 if(!i && include) return include;
                 let grade = randomGrade();
