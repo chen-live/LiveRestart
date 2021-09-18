@@ -548,6 +548,7 @@ ul#total li .achievementtitle,
 
 
 .judge {
+  min-height: 50vh;
   list-style: none;
   flex: 1;
   margin: 1rem;

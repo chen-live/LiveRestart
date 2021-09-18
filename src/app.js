@@ -11,7 +11,7 @@ class App{
     #pages;
     #currentPage;
     #talentSelected = new Set();
-    #totalMax=10000;
+    #totalMax= 20;
     #isEnd = false;
     #selectedExtendTalent = null;
     #hintTimeout;
@@ -46,7 +46,7 @@ class App{
         const loadingPage = $(`
         <div id="main">
             <div id="title">
-                人生重开模拟器<br>
+                人生重开模拟器plus<br>
                 <div style="font-size:1.5rem; font-weight:normal;">加载中...</div>
             </div>
         </div>
@@ -61,7 +61,7 @@ class App{
             <button id="save">Save</button>
             <button id="load">Load</button>
             <div id="title">
-                人生重开模拟器<br>
+                人生重开模拟器plus<br>
                 <div style="font-size:1.5rem; font-weight:normal;">这垃圾人生一秒也不想呆了</div>
             </div>
             <button id="restart" class="mainbtn"><span class="iconfont">&#xe6a7;</span>立即重开</button>
@@ -257,7 +257,7 @@ class App{
                 //     return;
                 // }
                 talentPage.find('#next').hide()
-                this.#totalMax = 200 + this.#life.getTalentAllocationAddition(Array.from(this.#talentSelected).map(({id})=>id));
+                this.#totalMax = 20 + this.#life.getTalentAllocationAddition(Array.from(this.#talentSelected).map(({id})=>id));
                 this.switch('property');
             })
 
