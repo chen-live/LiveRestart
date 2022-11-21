@@ -9,7 +9,6 @@
         "build": "webpack --mode production"
     },
     "dependencies": {
-        "v-transform": "git+https://github.com/VickScarlet/vTransform",
         "@babel/core": "^7.15.4",
         "@babel/preset-env": "^7.15.4",
         "babel-loader": "^8.2.2",
